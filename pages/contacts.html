@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="../styles.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <img class="header__logo" src="../images/logo.jpg" width="70" height="70" />
+            <h1 class="header__name">Кленова Екатерина</h1>
+        </header>
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="../index.html" class="navigation__item-a">Главная</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="../pages/projects.html" class="navigation__item-a ">Проекты</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="../pages/diary.html" class="navigation__item-a">Дневник</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="../pages/contacts.html" class="navigation__item-a active">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <h2 class="page__title">Свяжитесь со мной</h2>
+        <form class="back-form" action="/submit" method="post">
+            <div class="form__name">
+                <label for="name">Имя: </label>
+                <input type="text" name="name" id="name" placeholder="Ваше имя" required>
+            </div>
+            <div class="form__email">
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" placeholder="Ваш email" required>
+            </div>
+            <div class="form__comment">
+                <label for="comment">Сообщение: </label>
+                <textarea name="comment" id="comment"></textarea>
+            </div>
+            <button class="back-form__btn" type="submit">Отправить</button>
+        </form>
+        <section class="contacts">
+            <h2 class="contacts__title">Контакты</h2>
+            <div class="contacts__group">
+                <p>klenova.e.m@edu.mirea.ru</p>
+                <p>GitHub: katyakkatya</p>
+                <p>Москва, Россия</p>
+            </div>
+        </section>
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Супер-сайт</p>
+        </footer>
+    </body>
+
+</html>

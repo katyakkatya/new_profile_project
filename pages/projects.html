@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="../styles.css">
+        
+        
+    </head>
+
+    <body>
+        <header class="header">
+            <img class="header__logo" src="../images/logo.jpg" width="70" height="70" />
+            <h1 class="header__name">Кленова Екатерина</h1>
+        </header>
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="../index.html" class="navigation__item-a">Главная</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="../pages/projects.html" class="navigation__item-a active">Проекты</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="../pages/diary.html" class="navigation__item-a">Дневник</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="../pages/contacts.html" class="navigation__item-a">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="under-header">
+            <h2 class="projects-title">Мои проекты</h2>
+            <select class="filters__select">
+                <option value="all">Все</option>
+                <option value="html">HTML</option>
+                <option value="js">JS</option>
+                <option value="react">React</option>
+            </select>
+            
+        </div>
+        <section class="projects">
+            
+            <div class="projects__group">
+                <div class="projects__item" data-category="js">
+                    <img class="projects__item-photo" src="../images/project.jpg" width="100%" />
+                    <h3 class="projects__item-title">ToDoList</h3>
+                    <h4 class="projects__item-text">JS</h4>
+                    <button class="review-btn" onclick="openModal('todolist')">Обзор</button>
+                </div>
+                <div class="projects__item" data-category="html">
+                    <img class="projects__item-photo" src="../images/project.jpg" width="100%" />
+                    <h3 class="projects__item-title">Личный сайт</h3>
+                    <h4 class="projects__item-text">HTML, CSS</h4>
+                    <button class="review-btn" onclick="openModal('website')">Обзор</button>
+                </div>
+                <div class="projects__item" data-category="html">
+                    <img class="projects__item-photo" src="../images/project.jpg" width="100%" />
+                    <h3 class="projects__item-title">Портфолио</h3>
+                    <h4 class="projects__item-text">Bootstrap</h4>
+                    <button class="review-btn" onclick="openModal('portfolio')">Обзор</button>
+                </div>
+                <div class="projects__item" data-category="react">
+                    <img class="projects__item-photo" src="../images/project.jpg" width="100%" />
+                    <h3 class="projects__item-title">Интернет-магазин</h3>
+                    <h4 class="projects__item-text">React</h4>
+                    <button class="review-btn" onclick="openModal('store')">Обзор</button>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Супер-сайт</p>
+        </footer>
+
+        <div class="modal-backdrop">
+            <div id="modal" class="project-modal">
+                <h2 class="project-modal__title">Обзор проекта</h2>
+                <img class="project-modal__img" src="../images/project.jpg" />
+                <h3 class="project-modal__description">Описание</h3>
+                <div class="project-modal__description-content">
+
+                </div>
+                <button class="close-btn" onclick="closeModal()">Закрыть</button>
+            </div>
+        </div>
+        <script src="../scripts/projectModal.js"></script>
+        <script src="../scripts/dataProjects.js"></script>
+        <script src="../scripts/filterProject.js"></script>
+    </body>
+
+</html>
