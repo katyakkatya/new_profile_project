@@ -199,6 +199,16 @@ a {
     display: none;
 }
 
+
+
+input {
+    width: 1fr;
+}
+
+textarea {
+    width: 1fr;
+}
+
 .under-header {
     display: flex;
     align-items: center;
@@ -294,19 +304,19 @@ a {
 }
 
 .form__name {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     gap: 10px;
 }
 
 .form__email {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     gap: 10px;
 }
 
 .form__comment {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     gap: 10px;
 }
@@ -315,14 +325,16 @@ form input {
     border: solid 2px var(--secondary-color);
     border-radius: var(--default-border-radius);
     padding: 5px;
-    width: clamp(100px, 10vw, 200px);
+    margin-top: 5px;
+    /* width: clamp(100px, 10vw, 200px); */
 }
 
 form textarea {
     border: solid 2px var(--secondary-color);
     border-radius: var(--default-border-radius);
     padding: 5px;
-    width: clamp(100px, 10vw, 200px);
+    margin-top: 5px;
+    /* width: clamp(100px, 10vw, 200px); */
 }
 
 .back-form__btn {
@@ -431,4 +443,8 @@ form textarea {
         grid-template-columns: repeat(2, 1fr);
     }
 
+}
+
+.form__block {
+    display: block;
 }
