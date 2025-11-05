@@ -11,17 +11,24 @@
     </head>
 
     <body>
+        <a class="skip-link" href="#projects">Перейти к проектам</a>
         <header class="header">
-            <img class="header__logo" src="../images/logo.jpg" width="70" height="70" />
+            <img class="header__logo" src="../images/logo-900.png"
+                srcset="../images/logo-300.png 300w, ../images/logo-600.png 600w, ../images/logo-900.png 900w"
+                sizes="70px" 
+                width="70" 
+                height="70"
+                loading="lazy" 
+                alt="Лого"/>
             <h1 class="header__name">Кленова Екатерина</h1>
         </header>
-        <nav class="navigation">
+        <nav class="navigation" aria-label="Основная навигация">
             <ul class="navigation__list">
                 <li class="navigation__item">
                     <a href="../index.html" class="navigation__item-a">Главная</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="../pages/projects.html" class="navigation__item-a active">Проекты</a>
+                    <a href="../pages/projects.html" aria-current="page" class="navigation__item-a active">Проекты</a>
                 </li>
                 <li class="navigation__item">
                     <a href="../pages/diary.html" class="navigation__item-a">Дневник</a>
@@ -41,32 +48,49 @@
             </select>
             
         </div>
-        <section class="projects">
+        <section id="projects" class="projects">
             
             <div class="projects__group">
                 <div class="projects__item" data-category="js">
-                    <img class="projects__item-photo" src="../images/project.jpg" width="100%" />
-                    <h3 class="projects__item-title">ToDoList</h3>
-                    <h4 class="projects__item-text">JS</h4>
-                    <button class="review-btn" onclick="openModal('todolist')">Обзор</button>
+                    <img class="projects__item-photo" alt="Фото проекта" src="../images/project1-900.png" width="100%" height="100%" loading="lazy" srcset="../images/project1-300.png 300w, ../images/project1-600.png 600w, ../images/project1-900.png 900w" sizes="100%"/>
+                    <div class="projects__item-footer">
+                        <h3 class="projects__item-title">ToDoList</h3>
+                        <h4 class="projects__item-text">JS</h4>
+                        <button class="review-btn" onclick="openModal('todolist')">Обзор</button>
+                    </div>
                 </div>
                 <div class="projects__item" data-category="html">
-                    <img class="projects__item-photo" src="../images/project3.jpg" width="100%" />
-                    <h3 class="projects__item-title">Личный сайт</h3>
-                    <h4 class="projects__item-text">HTML, CSS</h4>
-                    <button class="review-btn" onclick="openModal('website')">Обзор</button>
+                    <img class="projects__item-photo" src="../images/project2-900.png" width="100%" height="100%" loading="lazy"
+                        srcset="../images/project2-300.png 300w, ../images/project2-600.png 600w, ../images/project2-900.png 900w"
+                        sizes="100%"
+                        alt="Фото проекта" />
+                    <div class="projects__item-footer">
+                        <h3 class="projects__item-title">Личный сайт</h3>
+                        <h4 class="projects__item-text">HTML, CSS</h4>
+                        <button class="review-btn" onclick="openModal('website')">Обзор</button>
+                    </div>
                 </div>
                 <div class="projects__item" data-category="html">
-                    <img class="projects__item-photo" src="../images/project2.jpg" width="100%" />
-                    <h3 class="projects__item-title">Портфолио</h3>
-                    <h4 class="projects__item-text">Bootstrap</h4>
-                    <button class="review-btn" onclick="openModal('portfolio')">Обзор</button>
+                    <img class="projects__item-photo" src="../images/project3-900.png" width="100%" height="100%" loading="lazy"
+                        srcset="../images/project3-300.png 300w, ../images/project3-600.png 600w, ../images/project3-900.png 900w"
+                        sizes="100%" 
+                        alt="Фото проекта"/>
+                    <div class="projects__item-footer">
+                        <h3 class="projects__item-title">Портфолио</h3>
+                        <h4 class="projects__item-text">Bootstrap</h4>
+                        <button class="review-btn" onclick="openModal('portfolio')">Обзор</button>
+                    </div>
                 </div>
                 <div class="projects__item" data-category="react">
-                    <img class="projects__item-photo" src="../images/project3.jpg" width="100%" />
-                    <h3 class="projects__item-title">Интернет-магазин</h3>
-                    <h4 class="projects__item-text">React</h4>
-                    <button class="review-btn" onclick="openModal('store')">Обзор</button>
+                    <img class="projects__item-photo" src="../images/project4-900.png" width="100%" height="100%" loading="lazy"
+                        srcset="../images/project4-300.png 300w, ../images/project4-600.png 600w, ../images/project4-900.png 900w"
+                        sizes="100%" 
+                        alt="Фото проекта"/>
+                    <div class="projects__item-footer">
+                        <h3 class="projects__item-title">Интернет-магазин</h3>
+                        <h4 class="projects__item-text">React</h4>
+                        <button class="review-btn" onclick="openModal('store')">Обзор</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -75,9 +99,9 @@
         </footer>
 
         <div class="modal-backdrop">
-            <div id="modal" class="project-modal">
+            <div id="modal" class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
                 <h2 class="project-modal__title">Обзор проекта</h2>
-                <img class="project-modal__img" src="../images/project.jpg" />
+                <img class="project-modal__img" />
                 <h3 class="project-modal__description">Описание</h3>
                 <div class="project-modal__description-content">
 

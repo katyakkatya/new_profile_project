@@ -7,14 +7,22 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#best-projects">Перейти к лучшим проектам</a>
     <header class="header">
-        <img class="header__logo" src="./images/logo.jpg" width="70" height="70"/>
+        <img class="header__logo" 
+        src="./images/logo-900.png" 
+        srcset="../images/logo-300.png 300w, ../images/logo-600.png 600w, ../images/logo-900.png 900w"
+        sizes="70px"
+        width="70" 
+        height="70"
+        loading="lazy"
+        alt="Лого"/>
         <h1 class="header__name">Кленова Екатерина</h1>
     </header>
-    <nav class="navigation">
+    <nav class="navigation" aria-label="Основная навигация">
         <ul class="navigation__list">
             <li class="navigation__item">
-                <a href="./index.html" class="navigation__item-a active">Главная</a>
+                <a href="./index.html" aria-current="page" class="navigation__item-a active">Главная</a>
             </li>
             <li class="navigation__item">
                 <a href="./pages/projects.html" class="navigation__item-a">Проекты</a>
@@ -28,7 +36,11 @@
         </ul>
     </nav>
     <section class="about">
-        <img class="about__ava" src="./images/ava.jpg" width="250" height="250"/>
+        <img class="about__ava" src="./images/ava-900.png" width="250" height="250"
+        srcset="./images/ava-300.png 300w, ./images/ava-600.png 600w, ./images/ava-900.png 900w"
+        sizes="250px"
+        loading="lazy"
+        alt="Фото проекта"/>
         <div class="about__group">
             <p class="about__text">Привет! Я, Катя!</br>Студентка группы ЭФБО-02-24.</br>Увлекаюсь веб-разработкой.</p>
             <a class="about__button" href="./assets/ForPr13.pdf">Скачать резюме</a>
@@ -63,21 +75,24 @@
             </div>
         </div>
     </section>
-    <section class="projects">
+    <section id="best-projects" class="projects">
         <h2 class="projects__title">Лучшие проекты</h2>
         <div class="projects__group">
             <div class="projects__item">
-                <img class="projects__item-photo" src="./images/project.jpg" width="100%"/>
+                <img class="projects__item-photo" src="./images/project4-900.png" width="100%" height="100%" loading="lazy"
+                    srcset="./images/project4-300.png 300w, ./images/project4-600.png 600w, ./images/project4-900.png 900w"
+                    sizes="100%" 
+                    alt="Фото проекта"/>
                 <h3 class="projects__item-text">ToDoList</h3>
             </div>
             <div class="projects__item">
-                <img class="projects__item-photo" src="./images/project3.jpg" width="100%"/>
+                <img class="projects__item-photo" src="./images/project2-900.png" width="100%" height="100%" loading="lazy"
+                    srcset="./images/project2-300.png 300w, ./images/project2-600.png 600w, ./images/project2-900.png 900w"
+                    sizes="100%" 
+                    alt="Фото проекта"/>
                 <h3 class="projects__item-text">Личный сайт</h3>
             </div>
-            <div class="projects__item">
-                <img class="projects__item-photo" src="./images/project2.jpg" width="100%"/>
-                <h3 class="projects__item-text">Портфолио</h3>
-            </div>
+            
         </div>
     </section>
     <footer class="footer">
